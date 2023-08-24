@@ -131,7 +131,7 @@ const  { id } = useParams();
        })}
       </div>
     
-      <div>
+      <div className=" flex flex-col items-end">
       {reply && (
           <div className=" justify-between flex items-center    rounded-lg bg-gradient-to-b to-red-300 from-purple-300 border-b-2 border-white w-1/3 h-10">
             <div className="flex flex-row items-center justify-center">
@@ -143,7 +143,7 @@ const  { id } = useParams();
             </div>
           </div>
         )}
-      {pic && <div className=" self-center"> <img src={pic} className="  h-40  w-40" /><p className=" w-40 line-clamp-2">{inputValue }</p></div>}
+      {pic && <div className=" opacity-50 flex items-end flex-col  "> <img src={pic} className="  h-40  w-40" /><p className=" w-40 line-clamp-2">{inputValue }</p></div>}
      
         </div>
       <div className="relative    p-1 w-full  flex items-center">

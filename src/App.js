@@ -14,6 +14,7 @@ import Popularslist from "./Popularslist";
 import Explore from "./Explore";
 import Chat from "./Chat";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Chatfriends from "./Chatfriends";
 
 function App() {
   const [scroll, setscroll] = useState(0);
@@ -126,10 +127,12 @@ function App() {
           )}
           <Profilesidemenu />
           
-            <Routes>
+          <Routes>
+            
               <Route index element={<Blogbody  />} />
               <Route path="chat/:id" element={<Chat />} />
-              <Route path="explore" element={<Explore/>} />
+              <Route path="chat" element={<Chatfriends/>} />
+            <Route path="explore" element={<Explore />} />
             </Routes>
           
           <Popularslist />

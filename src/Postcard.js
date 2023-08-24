@@ -68,7 +68,8 @@ export default function Postcard({
             <>
               <div className="flex flex-row max-w-full  p-2  border-white border-b-2">
                 <div className="flex flex-row items-center justify-center">
-                  <img
+                  <img 
+                    
                     className=" m-2 object-fill rounded-full h-10 w-10 self-start  "
                     src={poster.user.profilePicture}
                   />

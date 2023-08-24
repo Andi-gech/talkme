@@ -155,6 +155,7 @@ export const posts = [
     text: "Caught this stunning view during my morning jog. Embracing a healthy lifestyle! 🏃‍♂️🌅",
     likes: 280,
   },
+  
 ];
 
 // Use the 'posts' array as needed in your application
