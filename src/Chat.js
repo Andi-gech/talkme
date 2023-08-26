@@ -119,10 +119,11 @@ const  { id } = useParams();
   
   
   }
-  
+   
   return (
-    <div className=" border-l-2  border-gray-400 border-opacity-20 bg-zinc-100  w-1/2 flex flex-col pl-2 pr-2  overflow-y-auto  ">
-      <div className="flex  flex-1 flex-col h-full overflow-y-scroll" ref={chatContainerRef}>
+    <div className=" border-l-2 dark:bg-zinc-950   border-gray-400 border-opacity-20 bg-zinc-100  sm:w-1/2 w-full flex flex-col pl-2 pr-2      ">
+      
+      <div className="flex h-full  flex-col    overflow-y-auto overflow-x-hidden" ref={chatContainerRef}>
         {message.map((m) => {
       
 
@@ -131,7 +132,7 @@ const  { id } = useParams();
        })}
       </div>
     
-      <div className=" flex flex-col items-end">
+      <div className=" flex flex-col s items-end">
       {reply && (
           <div className=" justify-between flex items-center    rounded-lg bg-gradient-to-b to-red-300 from-purple-300 border-b-2 border-white w-1/3 h-10">
             <div className="flex flex-row items-center justify-center">
@@ -143,27 +144,28 @@ const  { id } = useParams();
             </div>
           </div>
         )}
-      {pic && <div className=" opacity-50 flex items-end flex-col  "> <img src={pic} className="  h-40  w-40" /><p className=" w-40 line-clamp-2">{inputValue }</p></div>}
+      {pic && <div className=" dark:text-white opacity-50 flex items-end flex-col  "> <img src={pic} className="  h-40  w-40" /><p className=" w-40 line-clamp-2">{inputValue }</p></div>}
      
         </div>
-      <div className="relative    p-1 w-full  flex items-center">
+      <div className="relative      p-1 /w-full  flex items-center">
         <div className=" flex flex-1 flex-col" >
         
-        <textarea  value={inputValue}  onChange={handleChange} className=" px-3 pt-1 z-10 h-1/2 bg-zinc-300 focus: outline-none flex-1 rounded-full pl" />
-       </div> <div className="mx-1 bg-gradient-to-b to-red-500 from-purple-900 h-10 w-10 flex items-center justify-center rounded-full">
-          <FaFile onClick={handleIconClick} />
+        <textarea  value={inputValue}  onChange={handleChange} className="dark:bg-zinc-800 dark:text-white px-3 pt-1 z-10 h-1/2 bg-zinc-300 focus: outline-none flex-1 rounded-full pl" />
+       </div> <div  onClick={handleIconClick}  className="mx-1 bg-gradient-to-b to-red-500 from-purple-900 h-10 w-10 flex items-center justify-center rounded-full">
+          <FaFile/>
            <input
         type="file"
-        ref={fileInputRef}
+            ref={fileInputRef}
+         
             style={{ display: 'none' }}
             onKeyDown={handleKeyDown}
         onChange={handleFileChange}
       />
         </div> 
-        <div className="mx-1 bg-gradient-to-b to-red-500 from-purple-900 h-10 w-10 flex items-center justify-center rounded-full">
+        <div     onClick={senmessage} className="mx-1  bg-gradient-to-b to-red-500 from-purple-900 h-10 w-10 flex items-center justify-center rounded-full">
           <FaPaperPlane
             color="white"
-            onClick={senmessage}
+        
             className="bg-gradient-to-b to-red-500 from-purple-900"
             size={25}
           />

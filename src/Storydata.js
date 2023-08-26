@@ -31,6 +31,30 @@ export const datas = [
     seen: false,
   },
   {
+    id: 44,
+    img: user2,
+    story: forest,
+    seen: false,
+  },
+  {
+    id: 44,
+    img: user2,
+    story: forest,
+    seen: false,
+  },
+  {
+    id: 44,
+    img: user2,
+    story: forest,
+    seen: false,
+  },
+  {
+    id: 44,
+    img: user2,
+    story: forest,
+    seen: false,
+  },
+  {
     id: 3,
     img: user3,
     story: burger,

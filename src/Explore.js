@@ -26,7 +26,7 @@ export default function Explore() {
 
 
   return (
-    <div className=" border-l-2 border-gray-400 border-opacity-20 bg-zinc-100  w-1/2 flex flex-col pl-2  overflow-y-auto  ">
+    <div className="dark:bg-zinc-900 border-l-2 border-gray-400 border-opacity-20 bg-zinc-100  sm:w-1/2 flex flex-col pl-2  overflow-y-auto  overflow-x-hidden ">
       <Search />
       <div className="  grid grid-cols-3  grid-rows-none grid-flow-row-dense ">
         {posts.map((p, index) => {

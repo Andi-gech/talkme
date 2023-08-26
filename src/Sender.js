@@ -4,7 +4,7 @@ import { FaReply } from 'react-icons/fa'
 export default function Sender({ image, text, pp, onclick,me,reply }) {
  
   return (
-      <div className={`relative flex ${me?"flex-row self-end ":" flex-row-reverse"}  mt-4  w-fit h-fit`}>
+      <div className={` relative flex ${me?"flex-row self-end ":" flex-row-reverse"}  mt-4  w-fit h-fit`}>
 
       <div className={`flex  z-10 text-white group flex-col whitespace-pre-wrap  px-2  max-w-xs h-auto p-2  rounded-md  self-end ${me ? "bg-gradient-to-b to-red-500 from-purple-900 " : "  bg-zinc-900"}  `}>
       {reply&&    <div className=' p-2   w-24  flex flex-row  text-white rounded-md '>

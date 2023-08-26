@@ -17,14 +17,14 @@ export default function Postcard({
   }
 
   return (
-    <div className=" flex flex-col   my-6 w-2/3 h-fit">
+    <div className=" flex flex-col sm:w-2/3 sm:px-0 px-2  my-6 h-fit">
       <div className=" flex flex-row  max-w-full max-h-fit">
         <img
           onClick={handleClick}
           className=" object-fill rounded-full h-10 w-10  cursor-pointer "
           src={poster.user.profilePicture}
         />
-        <div className=" bg-zinc-100 shadow-gray-300 shadow-md h-auto rounded-xl    mt-4  p-2 text-black flex flex-col">
+        <div className=" dark:bg-zinc-900 dark:shadow-gray-700 dark:text-white bg-zinc-100 shadow-gray-300 shadow-md h-auto rounded-xl    mt-4  p-2 text-black flex flex-col">
           {poster.image && (
             <img src={poster.image} className=" h-auto  max-w-full " />
           )}
@@ -40,14 +40,14 @@ export default function Postcard({
                 <IoMdHeart
                   onClick={onheartclicked}
                   color="red"
-                  className="mx-2"
+                  className="mx-2 "
                   size={25}
                 />
               ) : (
                 <IoMdHeartEmpty
                   onClick={onheartclicked}
-                  color="black"
-                  className="mx-2"
+               
+                  className="mx-2 dark:text-white "
                   size={25}
                 />
               )}
@@ -55,18 +55,18 @@ export default function Postcard({
             <div className="flex flex-row items-center justify-center">
               {poster.likes}
               <FaComment
-                color="black"
-                className="mx-2"
+                
+                className="mx-2 dark:text-white"
                 onClick={oncommentclicked}
                 size={25}
               />
             </div>
 
-            <FaShare color="black" className="mx-2" size={25} />
+            <FaShare  className="mx-2 dark:text-white" size={25} />
           </div>
           {isopend && (
             <>
-              <div className="flex flex-row max-w-full  p-2  border-white border-b-2">
+              <div className="flex flex-row max-w-full  p-2  dark:border-zinc-800 border-white border-b-2">
                 <div className="flex flex-row items-center justify-center">
                   <img 
                     
@@ -79,7 +79,7 @@ export default function Postcard({
                   </div>
                 </div>
               </div>
-              <div className="flex flex-row max-w-full  p-2  border-white border-b-2">
+              <div className="flex flex-row max-w-full  p-2  dark:border-zinc-800 border-white border-b-2">
                 <div className="flex flex-row items-center justify-center">
                   <img
                     className=" m-2 object-fill rounded-full h-10 w-10 self-start  "
